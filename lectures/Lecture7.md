@@ -73,6 +73,33 @@ Logical and Relational Operators
 | Left          | `\|`     | Logical _OR_          | `expr % expr` |
 
 
+```c++
+#include <iostream>
+
+int main() {
+    // Arithmetic Operators
+    int num1 = 10;
+    int num2 = 5;
+
+    std::cout << "Arithmetic Operations:\n";
+    std::cout << "Addition: " << num1 + num2 << "\n";
+    std::cout << "Subtraction: " << num1 - num2 << "\n";
+    std::cout << "Multiplication: " << num1 * num2 << "\n";
+    std::cout << "Division: " << static_cast<float>(num1) / num2 << "\n"; // Using float to avoid integer division
+
+    // Logical Operators
+    bool condition1 = true;
+    bool condition2 = false;
+
+    std::cout << "\nLogical Operations:\n";
+    std::cout << "AND Operation: " << (condition1 && condition2) << "\n";
+    std::cout << "OR Operation: " << (condition1 || condition2) << "\n";
+    std::cout << "NOT Operation: " << !condition1 << "\n";
+
+    return 0;
+}
+```
+
 ### Logical operators and short circuiting
 
 The right side of an && is evaluated if and only if the left side is true.
