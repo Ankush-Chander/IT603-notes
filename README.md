@@ -6,6 +6,36 @@ Course is designed as a first timer introduction to programming. It assumes no p
 ## Course outcome
 After taking this course, students will be able to write portable, efficient application programs in C++. They will also be able to navigate Linux environments fluently and take up new programming languages with relative ease.
 
+## Table of contents
+1. [Lecture 1](lectures/Lecture1.md)
+  - Layered Architecture
+  - Hardware overview of the system:
+    - Buses
+    - I/O devices
+    - Main memory
+    - Processor
+  - GUI(Graphical user interface) vs CLI (Command line interface)
+2. [Lecture 2](lectures/Lecture2.md)
+  - Working with linux commands
+  - OS abstractions (processes and files)
+  - Process related commands
+3.  [Lecture 3](lectures/Lecture3.md)
+  - Files related linux commands
+4.  [Lecture 4](lectures/Lecture4.md)
+  - How does processes and files interact with each other?
+  - Shell script basics
+5.  [Lecture 5](lectures/Lecture5.md)
+  - Thorough understanding of compilation process
+  - How C++ programs do IO?
+    - Command line arguments
+    - standard I/O  
+6.  [Lecture 6](lectures/Lecture6.md)
+  - Variables and Basic Types
+  - Memory management
+7.  [Lecture 7](lectures/Lecture7.md)
+  - Building blocks of a program
+    - Expressions/Statements
+    - Control flow  
 ## Reference material
 1. [C++ Primer, Fifth Edition, Stanley B. Lippman et al (online book)](https://cpp-primer.pages.dev/book/010-chapter_1._getting_started.html)
 2. [UNIX : Concepts and Applications, Sumitabha Das](https://www.goodreads.com/book/show/13020835-unix-concepts-and-applications)
