@@ -35,7 +35,13 @@ After taking this course, students will be able to write portable, efficient app
 7.  [Lecture 7](lectures/Lecture7.md)
   - Building blocks of a program
     - Expressions/Statements
-    - Control flow  
+    - Control flow
+8.  [Lecture 8](lectures/Lecture8.md)
+- Compound types
+  - References
+  - Pointers
+- Functions
+   
 ## Reference material
 1. [C++ Primer, Fifth Edition, Stanley B. Lippman et al (online book)](https://cpp-primer.pages.dev/book/010-chapter_1._getting_started.html)
 2. [UNIX : Concepts and Applications, Sumitabha Das](https://www.goodreads.com/book/show/13020835-unix-concepts-and-applications)
