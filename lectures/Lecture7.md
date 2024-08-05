@@ -63,14 +63,14 @@ Logical and Relational Operators
 | Associativity | Operator | Function              | Use           |
 | ------------- | -------- | --------------------- | ------------- |
 | Left          | `<`      | Less than             | `-expr`       |
-| Left          | `<=`     | Less than or equal    | `expr + expr` |
-| Left          | `>`      | Greater than          | `expr - expr` |
-| Left          | `>=`     | Greater than or equal | `expr * expr` |
-| Left          | `==`     | Equality              | `expr / expr` |
-| Left          | `!=`     | Inequality            | `expr % expr` |
-| Right         | `!`      | Logical _NOT_         | `+expr`       |
-| Left          | `&&`     | Logical _AND_         | `expr % expr` |
-| Left          | `\|`     | Logical _OR_          | `expr % expr` |
+| Left          | `<=`     | Less than or equal    | `expr <= expr` |
+| Left          | `>`      | Greater than          | `expr > expr` |
+| Left          | `>=`     | Greater than or equal | `expr >= expr` |
+| Left          | `==`     | Equality              | `expr == expr` |
+| Left          | `!=`     | Inequality            | `expr != expr` |
+| Right         | `!`      | Logical _NOT_         | `!expr`       |
+| Left          | `&&`     | Logical _AND_         | `expr && expr` |
+| Left          | `\|\|`     | Logical _OR_          | `expr \|\| expr` |
 
 
 ```c++
