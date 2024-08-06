@@ -16,7 +16,7 @@
 | Feature        | References                                                    | Pointers                                                      |
 | -------------- | ------------------------------------------------------------- | ------------------------------------------------------------- |
 | Definition     | An alias for another variable.                                | A variable that holds the memory address of another variable. |
-| Syntax         | `int& ref = var;`                                             | `int* ptr;`                                                   |
+| Syntax         | `int &ref = var;`                                             | `int *ptr;`                                                   |
 | Initialization | Must be initialized when declared.                            | Can be initialized to `NULL`, `nullptr`, or an address.       |
 | Dereferencing  | Automatically dereferenced.                                   | Use `*` operator to access the value at the address.          |
 | Reassignment   | Cannot be reassigned after initialization.                    | Can be reassigned to point to different addresses.            |
