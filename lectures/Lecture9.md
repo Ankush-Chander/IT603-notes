@@ -90,7 +90,8 @@ Hash directives, also known as preprocessor directives, are instructions that ar
 | #if / #elif / #else / #endif | Compilation that is conditional based on some expression.              |
 | #error                       | Halts the compilation process and produces an error notice.            |
 | #warning                     | During compilation, a warning notice is shown.                         |
-|#pragma|Provide the compiler specific instructions.|
+| #pragma                      | Provide the compiler specific instructions.                            |
+
 ---
 #### sharing variables across files
 
@@ -115,9 +116,13 @@ project/
 math_functions.h
 
 ```c++
-
+  
+// execute below code only when MATH_FUNCTIONS_H is not defined
 #ifndef MATH_FUNCTIONS_H
+
+// define MATH_FUNCTIONS_H so that below code is only executed once
 #define MATH_FUNCTIONS_H
+
 
 int add(int, int);
 int subtract(int, int);
@@ -127,13 +132,13 @@ int subtract(int, int);
 
 math_functions.cpp
 ```c++
-#include "math_functions.h"
+#include "math_functions.h" // contains function declaration
 
-int add(int a, int b) {
+int add(int a, int b) { // function definition verified against declaration
     return a + b;
 }
 
-int subtract(int a, int b) {
+int subtract(int a, int b) { // function definition verified against declaration
     return a - b;
 }
 
