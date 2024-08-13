@@ -41,6 +41,12 @@ After taking this course, students will be able to write portable, efficient app
   - References
   - Pointers
 - Functions
+9. [Lecture 9](lectures/Lecture9.md)
+- Multifile compilation
+10. [Lecture 10](lectures/Lecture10.md)
+- Virtual memory (OS env)
+- Strings (C++)
+
    
 ## Reference material
 1. [C++ Primer, Fifth Edition, Stanley B. Lippman et al (online book)](https://cpp-primer.pages.dev/book/010-chapter_1._getting_started.html)
