@@ -46,8 +46,13 @@ After taking this course, students will be able to write portable, efficient app
 10. [Lecture 10](lectures/Lecture10.md)
 - Virtual memory (OS env)
 - Strings (C++)
-
-   
+11.  [Lecture 11](lectures/Lecture11.md)
+- Different ways to consume standard input(C++)
+- Vectors(C++)
+12.  [Lecture 12](lectures/Lecture12.md)
+- Memory hierarchy(OS env)
+- Arrays(C++)
+- Multidimensional arrays(C++)
 ## Reference material
 1. [C++ Primer, Fifth Edition, Stanley B. Lippman et al (online book)](https://cpp-primer.pages.dev/book/010-chapter_1._getting_started.html)
 2. [UNIX : Concepts and Applications, Sumitabha Das](https://www.goodreads.com/book/show/13020835-unix-concepts-and-applications)
