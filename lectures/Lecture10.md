@@ -38,6 +38,7 @@ return 0;
 With virtual addressing, the CPU accesses main memory by generating a virtual address (VA), which is converted to the appropriate physical address before being sent to the memory. The task of converting a virtual address to a physical
 one is known as address translation.
 ![](images/address_translation.png)
+
 ---
 ##### Advantages of virtual memory
 - It uses *main memory efﬁciently by treating it as a cache for an address space stored on disk*, keeping only the active areas in main memory, and transferring data back and forth between disk and memory as needed.
