@@ -90,14 +90,14 @@ cout << greeting << endl; // "Hello World!"
 
 ---
 
-| **Feature**           | **String Literal** (`"Hello"`)       | **Char Array** (`char greeting[] = "Hello"`) | **std::string** (`std::string greeting = "Hello"`)                              |
+| **Feature**           | **String Literal** (`"Hello"`)       | **Char Array** (`char greeting[] = "Hello"`) | **std::string** (`std::string greeting = "Hello"`)                           |
 | --------------------- | ------------------------------------ | -------------------------------------------- | ------------------------------------------------------------------------------- |
-| **Type**              | `const char[]`                       | `char[]`                                     | `std::string`                                                                   |
-| **Null-Terminated**   | Yes (automatically)                  | Yes (if initialized with a string literal)   | No (internally managed, but compatible with C-style strings using `c_str()`)    |
-| **Mutable**           | No                                   | Yes                                          | Yes                                                                             |
-| **Memory Management** | Fixed at compile-time, read-only     | Fixed at compile-time, but mutable           | Dynamically managed, resizes automatically                                      |
-| **Usability**         | Limited                              | Requires careful management                  | High, with many built-in functions                                              |
-| **Memory Storage**    | Typically stored in read-only memory | Stack (if local)                             | Heap (dynamic allocation)                                                       |
+| **Type**              | `const char[]`                       | `char[]`                                     | `std::string`                                                                |
+| **Null-Terminated**   | Yes (automatically)                  | Yes (if initialized with a string literal)   | No (internally managed, but compatible with C-style strings using `c_str()`) |
+| **Mutable**           | No                                   | Yes                                          | Yes                                                                          |
+| **Memory Management** | Fixed at compile-time, read-only     | Fixed at compile-time, but mutable           | Dynamically managed, resizes automatically                                   |
+| **Usability**         | Limited                              | Requires careful management                  | High, with many built-in functions                                           |
+| **Memory Storage**    | Typically stored in read-only memory | Stack (if local)                             | Heap (dynamic allocation)                                                    |
 
 ---
 ##### Ways to Initialise strings(1)
