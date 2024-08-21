@@ -17,6 +17,9 @@ delivery date: 2024-08-20
 The storage devices in every computer system are organised as a memory hierarchy. As we move from the top of the hierarchy to the bottom, the devices become slower, larger, and less costly per byte.
 
 The main idea of a memory hierarchy is that *storage at one level serves as a cache for storage at the next lower level*. Thus, the register ﬁle is a cache for the L1 cache. Caches L1 and L2 are caches for L2 and L3, respectively. The L3 cache is a cache for the main memory, which is a cache for the disk.
+```bash
+lscpu | grep cache;getconf -a | grep CACHE
+```
 
 ---
 ![Memory hierarchy](https://raw.githubusercontent.com/Ankush-Chander/IT603-notes/6678e9b7bcc58cd88b6feb98a6e216d8d7743365/lectures/images/memory_hierarchy.png)
