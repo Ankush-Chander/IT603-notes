@@ -53,8 +53,10 @@ float getX(){return this->x;}
 
 // getter of y
 float getY(){return this->y;}
-
 ```
+
+**Method Chaining**: In the example above, the `setX()` and `setY()` methods return `*this`, which allows the methods to be chained together like `vec.setX(3.0).setY(4.0);`. Without returning `*this`, chaining wouldn’t be possible.
+
 ---
 #### Access operators (".", "->")
 ```c++
