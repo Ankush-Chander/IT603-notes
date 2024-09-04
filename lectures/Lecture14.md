@@ -140,14 +140,16 @@ unsigned float y;
 ```
 ---
 #### Byte ordering
-Byte ordering refers to the sequence in which bytes are arranged into larger numerical values when stored in memory.
 
 |                   | Little-Endian                                | Big-Endian                                  |
 | ----------------- | -------------------------------------------- | ------------------------------------------- |
 | **Definition**    | Stores the **least significant byte** first. | Stores the **most significant byte** first. |
-| **Memory Layout** | `0x12345`, it is stored as `00 00 30 39`.    | `0x12345` is stored as `39 30 00 00`.       |
-|                   |                                              |                                             |
+| **Memory Layout** | `0x12345`, it is stored as `39 30 00 00`.    | `0x12345` is stored as `00 00 30 39`.       |
+```bash
+# bash command to check byte ordering
+lscpu | grep Endian
 
+```
 ---
 #### Program to find out byte ordering
 ```c
@@ -184,13 +186,13 @@ return 0;
 ---
 #### Unsigned vs. 2's Complement Notation
 
-| Feature              | Unsigned                               | 2's Complement                                  |
-| -------------------- | -------------------------------------- | ----------------------------------------------- |
-| **Range of Values**  | Represents only non-negative integers. | Represents both positive and negative integers. |
-| **Bits usage**       | All bits makes positive contribution   |                                                 |
-| **min-max (n bits)** | `0` to $2^n$ - 1                       | -$2^{(n-1)}$ to $2^{(n-1)} - 1$                 |
-| **Example (4 bits)** | `0000` = 0 to `1111` = 15              | `1000` = -8 to `0111` = 7                       |
-|                      |                                        |                                                 |
+| Feature              | Unsigned                               | 2's Complement                                   |
+| -------------------- | -------------------------------------- | ------------------------------------------------ |
+| **Range of Values**  | Represents only non-negative integers. | Represents both positive and negative integers.  |
+| **Bits usage**       | All bits makes positive contribution   | Most significant bit makes negative contribution |
+| **min-max (n bits)** | `0` to $2^n$ - 1                       | -$2^{(n-1)}$ to $2^{(n-1)} - 1$                  |
+| **Example (4 bits)** | `0000` = 0 to `1111` = 15              | `1000` = -8 to `0111` = 7                        |
+|                      |                                        |                                                  |
 
 ---
 #### Example
@@ -217,12 +219,17 @@ Unsigned representation
 Image credits: [Neso Academy - Youtube](https://www.youtube.com/watch?v=-CEJXDeDsAQ&list=PLBlnK6fEyqRgLLlzdgiTUKULKJPYc0A4q&index=64)
 
 ---
+#### Steps to Calculate Two's Complement in ALU:
+1. **Bitwise Inversion (One's Complement):**
+    - The first step in computing the two's complement is to invert all the bits of the binary number (i.e., change 0s to 1s and 1s to 0s). (using not gate)
+2. **Adding 1 to the Inverted Number:**
+    - After inverting the bits, the next step is to add `1` to the least significant bit (LSB) of the inverted number to obtain the two's complement. (using adder circuit)
+---
 #### Today: Numeric representations 
 1. Numeric representations (Decimal, Binary, hexadecimal)
 2. Data sizes
 3. Integer representation (unsigned vs 2"s complement)
 4. **Integer arithmetic**
----
 ---
 #### Unsigned addition(1)
 1. **Align the Binary Numbers**: Ensure both numbers have the same number of bits. 
