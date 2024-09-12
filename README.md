@@ -53,6 +53,24 @@ After taking this course, students will be able to write portable, efficient app
 - Memory hierarchy(OS env)
 - Arrays(C++)
 - Multidimensional arrays(C++)
+13. [Lecture 13](lectures/Lecture13.md)
+- Classes
+14. [Lecture 14](lectures/Lecture14.md)
+- Numeric representations (Decimal, Binary, Hexadecimal)
+- Data sizes
+- Integer representation (unsigned vs 2"s complement)
+- Integer arithmetic
+15. [Lecture 15](lectures/Lecture15.md)
+- Fractional binary numbers
+- IEEE floating point representation
+- Normalization
+- Biased representation
+16. [Lecture 16](lectures/Lecture16.md)
+- Boolean Algebra
+- Bit level operations
+17. [Lecture 17](lectures/Lecture17.md)
+- Dynamic Memory
+
 ## Reference material
 1. [C++ Primer, Fifth Edition, Stanley B. Lippman et al (online book)](https://cpp-primer.pages.dev/book/010-chapter_1._getting_started.html)
 2. [UNIX : Concepts and Applications, Sumitabha Das](https://www.goodreads.com/book/show/13020835-unix-concepts-and-applications)
