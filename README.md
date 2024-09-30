@@ -70,6 +70,17 @@ After taking this course, students will be able to write portable, efficient app
 - Bit level operations
 17. [Lecture 17](lectures/Lecture17.md)
 - Dynamic Memory
+18. [Lecture 18](lectures/Lecture18.md)
+- Iterators
+19. [Lecture 19](lectures/Lecture19.md)
+- Time complexity analysis
+20. [Lecture 20](lectures/Lecture20.md)
+- Associative Containers
+21. [Lecture 21](lectures/Lecture21.md)
+- Generic Algorithms
+22. [Lecture 22](lectures/Lecture22.md)
+- Generic Algorithms(cont)
+ 
 
 ## Reference material
 1. [C++ Primer, Fifth Edition, Stanley B. Lippman et al (online book)](https://cpp-primer.pages.dev/book/010-chapter_1._getting_started.html)
