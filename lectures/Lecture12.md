@@ -148,7 +148,7 @@ cout << (*arr +1) << endl; // prints 1
 void print_array_using_iterator(int arr[], int size){
 	int *begin = arr;
 	int *end = arr + size;
-	for(int *i = begin; i < end; i++){
+	for(int *i = begin; i != end; i++){
 	cout << *i << " ";
 	}
 	cout << endl;
