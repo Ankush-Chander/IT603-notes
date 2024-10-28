@@ -80,7 +80,10 @@ After taking this course, students will be able to write portable, efficient app
 - Generic Algorithms
 22. [Lecture 22](lectures/Lecture22.md)
 - Generic Algorithms(cont)
- 
+23. [Lecture 23](https://github.com/CppCon/CppCon2021/blob/main/Presentations/back_to_basics_classic_stl__bob_steagall__cppcon_2021_1.pdf)
+- [Back to Basics: Classic STL - Bob Steagall - CppCon 2021](https://www.youtube.com/watch?v=tXUXl_RzkAk) 
+24. [Lecture 24](https://github.com/CppCon/CppCon2021/blob/main/Presentations/back_to_basics_templates_part_1__bob_steagall__cppcon_2021.pdf)
+- [Back to Basics: Templates (part 1 of 2) - Bob Steagall - CppCon 2021](https://www.youtube.com/watch?v=XN319NYEOcE)  
 
 ## Reference material
 1. [C++ Primer, Fifth Edition, Stanley B. Lippman et al (online book)](https://cpp-primer.pages.dev/book/010-chapter_1._getting_started.html)
