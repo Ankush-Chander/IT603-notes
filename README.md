@@ -84,7 +84,8 @@ After taking this course, students will be able to write portable, efficient app
 - [Back to Basics: Classic STL - Bob Steagall - CppCon 2021](https://www.youtube.com/watch?v=tXUXl_RzkAk) 
 24. [Lecture 24](https://github.com/CppCon/CppCon2021/blob/main/Presentations/back_to_basics_templates_part_1__bob_steagall__cppcon_2021.pdf)
 - [Back to Basics: Templates (part 1 of 2) - Bob Steagall - CppCon 2021](https://www.youtube.com/watch?v=XN319NYEOcE)  
-
+25. [Lecture 25](lectures/Lecture25.md)
+- Function Templates
 ## Reference material
 1. [C++ Primer, Fifth Edition, Stanley B. Lippman et al (online book)](https://cpp-primer.pages.dev/book/010-chapter_1._getting_started.html)
 2. [UNIX : Concepts and Applications, Sumitabha Das](https://www.goodreads.com/book/show/13020835-unix-concepts-and-applications)
