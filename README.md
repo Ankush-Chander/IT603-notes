@@ -70,6 +70,20 @@ After taking this course, students will be able to write portable, efficient app
 - Bit level operations
 17. [Lecture 17](lectures/Lecture17.md)
 - Dynamic Memory
+18. [Lecture 18](lectures/Lecture18.md)
+- Iterators
+19. [Lecture 19](lectures/Lecture19.md)
+- Time complexity analysis
+20. [Lecture 20](lectures/Lecture20.md)
+- Associative Containers
+21. [Lecture 21](lectures/Lecture21.md)
+- Generic Algorithms
+22. [Lecture 22](lectures/Lecture22.md)
+- Generic Algorithms(cont)
+23. [Lecture 23](https://github.com/CppCon/CppCon2021/blob/main/Presentations/back_to_basics_classic_stl__bob_steagall__cppcon_2021_1.pdf)
+- [Back to Basics: Classic STL - Bob Steagall - CppCon 2021](https://www.youtube.com/watch?v=tXUXl_RzkAk) 
+24. [Lecture 24](https://github.com/CppCon/CppCon2021/blob/main/Presentations/back_to_basics_templates_part_1__bob_steagall__cppcon_2021.pdf)
+- [Back to Basics: Templates (part 1 of 2) - Bob Steagall - CppCon 2021](https://www.youtube.com/watch?v=XN319NYEOcE)  
 
 ## Reference material
 1. [C++ Primer, Fifth Edition, Stanley B. Lippman et al (online book)](https://cpp-primer.pages.dev/book/010-chapter_1._getting_started.html)

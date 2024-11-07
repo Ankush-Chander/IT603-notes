@@ -84,7 +84,7 @@ Program has poor spatial locality as variables are accessed in the same order th
 
 ---
 #### Relative latencies
-![](https://github.com/Ankush-Chander/Tech-Talks/blob/main/img/relative-time-latencies-computer-programming.jpg?raw=true 1400*1400px)
+![](https://github.com/Ankush-Chander/Tech-Talks/blob/main/img/relative-time-latencies-computer-programming.jpg?raw=true)  
 Pic credits:  [relative-time-latencies-and-computer-programming](https://alvinalexander.com/photos/relative-time-latencies-and-computer-programming/)
 
 ---
@@ -148,7 +148,7 @@ cout << (*arr +1) << endl; // prints 1
 void print_array_using_iterator(int arr[], int size){
 	int *begin = arr;
 	int *end = arr + size;
-	for(int *i = begin; i < end; i++){
+	for(int *i = begin; i != end; i++){
 	cout << *i << " ";
 	}
 	cout << endl;
