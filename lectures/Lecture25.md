@@ -52,6 +52,7 @@ Each [type of standard conversion sequence](https://en.cppreference.com/w/cpp/l
 1) **Exact match**: no conversion required, lvalue-to-rvalue conversion, qualification conversion, function pointer conversion,(since C++17) user-defined conversion of class type to the same class
 2) **Promotion**: integral promotion, floating-point promotion  
 3) **Conversion**: integral conversion, floating-point conversion, floating-integral conversion, pointer conversion, pointer-to-member conversion, boolean conversion, user-defined conversion of a derived class to its base
+
 ---
 #### 1) Exact Match
 - **No Conversion Required**: 
