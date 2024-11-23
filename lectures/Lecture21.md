@@ -104,9 +104,11 @@ The `count` algorithm counts the number of occurrences of a specific value in a 
   - `value`: The value to count.
 
 - **Returns**: The number of elements that are equal to `value`.
+
 ---
 - **Example**:
-  ```cpp
+
+```cpp
 #include <algorithm>
 #include <vector>
 #include <iostream>
@@ -116,7 +118,8 @@ using namespace srd;
       int countOfTwos = count(vec.begin(), vec.end(), 2);
       cout << "Count of 2s: " << countOfTwos << endl;
 }
-  ```
+```
+
 ---
 
  **`accumulate`**  
