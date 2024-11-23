@@ -38,7 +38,7 @@ The **[sequential containers](https://cpp-primer.pages.dev/book/096-defined_ter
 An **iterator** is an object (like a pointer) that points to an element inside the container. We can use iterators to move through the contents of the container. They can be visualized as something similar to a pointer pointing to some location and we can access the content at that particular location using them.
 
 ---
-![[iterator_types.png]]
+![](https://raw.githubusercontent.com/Ankush-Chander/IT603-notes/49069a8e06c8f58a3d52751935d3a05188df5abe/lectures/images/iterator_types.png)
 
 ---
 #### Powers of iterators
