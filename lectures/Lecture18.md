@@ -105,3 +105,4 @@ auto it2 = cv.begin();
 #### References
 1. [3.4. Introducing Iterators | C++ Primer, Fifth Edition](https://cpp-primer.pages.dev/book/033-3.4._introducing_iterators.html)
 2. [Introduction to Iterators in C++ - GeeksforGeeks](https://www.geeksforgeeks.org/introduction-iterators-c)
+3. [Back to basic- STL(*imp: refer iterator slides)](https://github.com/CppCon/CppCon2021/blob/main/Presentations/back_to_basics_classic_stl__bob_steagall__cppcon_2021_1.pdf)
