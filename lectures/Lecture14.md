@@ -212,7 +212,7 @@ Unsigned representation
 | ---------------- | ------- | ----- | ------- | --- | --- |
 | **Bit Position** | 3       | 2     | 1       | 0   |     |
 | **Power of 2**   | -8      | 4     | 2       | 1   |     |
-| **Calculation**  | 1*-8=-8 | 0*4=0 | 1*2 = 2 | 0*1 | =-6 |
+| **Calculation**  | 1*-8=-8 | 0*4=0 | 1*2 = 2 | 1*1 | =-5 |
 
 ---
 ![image](https://github.com/Ankush-Chander/IT603-notes/blob/main/lectures/images/number_representations.png?raw=true)
