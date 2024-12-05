@@ -51,9 +51,8 @@ date: "[[2024-07-22]]"
 Different ways to launch programs:
 1. *via GUI*(Graphical User Interface)
 	When you double click a program(like vlc), it"s `.desktop` file is referred (`/usr/share/applications`). From there OS knows which program is to be run in order to run that application.
-2. via CLI (Command Line Interface)  
+2. via CLI (Command Line Interface) 
 	OS provides user [[Shell]] which is a program that executes other programs in response to text input. Shell interprets and executes the command.
-
 ---
 
 ### Kernel and Shell(1)
@@ -69,7 +68,7 @@ is the most important part of operating system that talks to hardware. It is loa
 
 ---
 ## System PATH
-Whenever you run a command, shell trues to find the file related to that command in PATH. in case that command is not found in any of these directories. it returns "command not found"
+Whenever you run a command, shell tries to find the file related to that command in PATH. in case that command is not found in any of these directories. it returns "command not found"
 ```bash
 echo $PATH
 # output: /home/ankush/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/ankush/workplace/myscripts 
