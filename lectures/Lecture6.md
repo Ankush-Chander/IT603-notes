@@ -49,23 +49,30 @@ double salePrice = applyDiscount(price, discount);
 ```
 
 ### Memory allocation of a program
-![Virtual memory](images/virtual_memory.png)
+![Virtual memory](virtual_memory.png)
 
-| Memory Segment | Type of Variables                                          | Characteristics                                  |
-|----------------|------------------------------------------------------------|--------------------------------------------------|
-| Stack          | - Local variables                                          | - Automatic allocation and deallocation          |
-|                | - Function call frames                                     | - LIFO (Last In, First Out) order                |
-|                | - Parameters                                               | - Limited size                                   |
-|                | - Temporary variables                                      | - Exists only for the duration of the function   |
-| Heap           | - Dynamically allocated variables (using `new` or `malloc`)| - Manual allocation and deallocation             |
-|                | - Objects and arrays allocated at runtime                  | - Can grow as needed                             |
-|                |                                                            | - Fragmentation possible                         |
-| Program Data   | - Global variables                                         | - Initialized at program start                   |
-| (Data Segment) | - Static variables                                         | - Divided into initialized and uninitialized     |
-|                | - Constants                                                | - Global lifetime                                |
-|                | - Strings                                                  | - Accessible throughout the program              |
-| Code Segment   | - Executable instructions                                  | - Read-only                                      |
-| (Text Segment) |                                                            | - Contains compiled code                         |
+---
+
+### Address space
+![](address_space.png)
+
+---
+
+| Memory Segment | Type of Variables                                           | Characteristics                                |
+| -------------- | ----------------------------------------------------------- | ---------------------------------------------- |
+| Stack          | - Local variables                                           | - Automatic allocation and deallocation        |
+|                | - Function call frames                                      | - LIFO (Last In, First Out) order              |
+|                | - Parameters                                                | - Limited size                                 |
+|                | - Temporary variables                                       | - Exists only for the duration of the function |
+| Heap           | - Dynamically allocated variables (using `new` or `malloc`) | - Manual allocation and deallocation           |
+|                | - Objects and arrays allocated at runtime                   | - Can grow as needed                           |
+|                |                                                             | - Fragmentation possible                       |
+| Program Data   | - Global variables                                          | - Initialized at program start                 |
+| (Data Segment) | - Static variables                                          | - Divided into initialized and uninitialized   |
+|                | - Constants                                                 | - Global lifetime                              |
+|                | - Strings                                                   | - Accessible throughout the program            |
+| Code Segment   | - Executable instructions                                   | - Read-only                                    |
+| (Text Segment) |                                                             | - Contains compiled code                       |
 
 
 # Default values
