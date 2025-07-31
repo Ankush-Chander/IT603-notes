@@ -49,12 +49,12 @@ double salePrice = applyDiscount(price, discount);
 ```
 
 ### Memory allocation of a program
-![Virtual memory](virtual_memory.png)
+![Virtual memory](images/virtual_memory.png)
 
 ---
 
 ### Address space
-![](address_space.png)
+![](images/address_space.png)
 
 ---
 
