@@ -1,5 +1,7 @@
 ---
-delivery date: 2024-08-08
+delivery date:
+  - 2024-08-08
+  - "[[2025-08-12]]"
 ---
 ### Quick recap
 1. Compound types
@@ -24,7 +26,7 @@ delivery date: 2024-08-08
 4. **Linker** takes multiple object files and generate a single executable file (test.o => test.out)
 
 ---
-![](images/linker.png)
+![](./images/linker.png)
 Linker positioned in compilation process.  
 Pic credits: CSAPP
 
@@ -36,7 +38,7 @@ Linker  perform two main tasks:
 **Relocation:** Compilers and assemblers generate code and data sections that start at address 0. The linker relocates these sections by associating a memory location with each symbol deﬁnition, and then modifying all of the references to those symbols so that they point to this memory location.
 
 ---
-![](images/relocation.png)
+![](./images/relocation.png)
 Relocation  
 Pic credits: CSAPP
 
@@ -44,7 +46,7 @@ Pic credits: CSAPP
 #### declaration vs definition vs initialisation vs assignment
 
 **Declaration**: Introduces the name of a variable, function, class, etc., and its type, without allocating memory or providing an implementation.  
-**Definition**: Provides the actual implementation or allocation of memory for the declared entity.
+**Definition**: Provides the actual implementation or allocation of memory for the declared entity.  
 **Initialization**: Assigning an initial value to a variable at the time of its definition.  
 **Assignment:** replaces existing value of a variable with a new value
 
