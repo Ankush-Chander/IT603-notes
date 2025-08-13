@@ -1,12 +1,10 @@
-## Lecture8
-
-## Quick recap
+### Quick recap
 1. Expressions are evaluated, yields values
 2. Statements are executed, leads to side effect, sometimes generate values
 3. Operators (Arithmetic, Logical/Relational operators, Conditional operators)
 4. Control flow (Sequential, Conditional, Iterative, Jumps)
 ---
-## Agenda:
+### Agenda:
 1. Compound datatypes (references, pointers)
 2. Functions
 
@@ -207,6 +205,97 @@ factorial(3.14);          // ok: argument is converted to int
 ```
 
 ---
+### Different ways to pass arguments
+
+1. Pass by value
+```c++
+void addTen(int x) {
+    x = x + 10;
+    std::cout << "Inside function: " << x << "\n";
+}
+
+int main() {
+    int a = 5;
+    addTen(a);
+    std::cout << "Outside function: " << a << "\n";
+}
+```
+
+
+---
+
+```vb
+main():      a = 5
+             |
+             v
+        [copy] -----> addTen(x = 5)
+                        x += 10 → x = 15
+        <---- returns, original a remains unchanged
+
+Output:
+Inside function: 15
+Outside function: 5
+
+```
+---
+2. Pass by reference
+```c++
+void addTen(const int& x) {
+    x = x + 10;
+    std::cout << "Inside function: " << x << "\n";
+}
+
+int main() {
+    int a = 5;
+    addTen(a);
+    std::cout << "Outside function: " << a << "\n";
+}
+
+```
+---
+```vb
+main():      a = 5
+             |
+             v
+        [reference] ---> addTen(x refers to a)
+                          x += 10 → a = 15
+
+Output:
+Inside function: 15
+Outside function: 15
+
+```
+---
+3. Pass by address
+
+```cpp
+void addTen(int* x) {
+    if (x) *x = *x + 10;
+    std::cout << "Inside function: " << *x << "\n";
+}
+
+int main() {
+    int a = 5;
+    addTen(&a);
+    std::cout << "Outside function: " << a << "\n";
+}
+
+```
+---
+```vb
+main():      a = 5
+             |
+             v
+        [address] ---> addTen(x = pointer to a)
+                        *x += 10 → a = 15
+
+Output:
+Inside function: 15
+Outside function: 15
+
+``` 
+---
+
 ### Scope and lifetime
 In C++, names have scope , and objects have lifetimes.
 
