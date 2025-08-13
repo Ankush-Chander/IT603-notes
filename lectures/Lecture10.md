@@ -17,50 +17,54 @@ delivery date: 2024-08-13
 
 ---
 #### Agenda
-1. Virtual memory (OS env) 
+1. Arrays (C++)
 2. Strings (C++)
 ---
-#### Virtual memory
-Quick experiment:
-```cpp
-int x = 10;
-int *p = &x;
-cout << long(p) << endl; // prints 140734008929212 ~140734 GB
-return 0;
+#### Arrays
+Arrays are a  [compound type](https://cpp-primer.pages.dev/book/023-2.3._compound_types.html#filepos394806). 
+An array declarator has the form `a[d]`, where 
+- `a` is the name being defined 
+- `d` is the dimension of the array. The dimension specifies the number of elements and must be greater than zero.    
+
+The number of elements in an array is part of the array’s type. As a result, the dimension must be known at compile time, which means that the **dimension must be a constant expression**
+
+---
+#### Array initialization
+```c++
+unsigned cnt = 42;          // not a constant expression
+constexpr unsigned sz = 42; // constant expression
+                            // constexpr see § 2.4.4 (p. 66)
+int arr[10];             // array of ten ints
+int *parr[sz];           // array of 42 pointers to int
+string bad[cnt];         // error: cnt is not a constant expression
+string strs[get_size()]; // ok if get_size is constexpr, error otherwise
 ```
 ---
-**Virtual memory** is a memory management technique that provides an "idealized abstraction of the storage resources that are actually available on a given machine which "creates the illusion to users of a very large (main) memory
+#### Accessing elements
+![](https://media.geeksforgeeks.org/wp-content/uploads/20250310111928472679/traverse-array.webp)
 
-![Image](images/virtual_memory.png)
-
----
-##### Address Translation
-With virtual addressing, the CPU accesses main memory by generating a virtual address (VA), which is converted to the appropriate physical address before being sent to the memory. The task of converting a virtual address to a physical
-one is known as address translation.
-![](images/address_translation.png)
+Arrays are accessed using [] operator.
+arr[0] refers to first element, arr[1] refers to the second element and so on
 
 ---
-##### Advantages of virtual memory
-- It uses *main memory efﬁciently by treating it as a cache for an address space stored on disk*, keeping only the active areas in main memory, and transferring data back and forth between disk and memory as needed.
-- It simpliﬁes memory management by *providing each process with a uniform address space*. 
-- It *protects the address space of each process* from corruption by other processes.
+#### Array indexes and pointer arithmetic
+- Name of the array is the address of the first element of the array.
+- Applying indexing operation on array is equivalent to dereferencing of the array elements
 ---
-##### Related commands
-```bash
-# used to see, set, or limit the resource usage of the current user
-ulimit -a
-# physical memory stats
-grep "Mem" /proc/meminfo
-# MemTotal:       15728428 kB
-# MemFree:         5499416 kB
-# MemAvailable:    9727596 kB
-# Virtual memory stats
-cat /proc/meminfo | grep -e "Vmalloc"
-# VmallocTotal:   34359738367 kB
-# VmallocUsed:       87340 kB
-# VmallocChunk:          0 kB
+	
+```c++
+int arr[5];
 ```
+
+| Notation  | Type |                                                                  |
+| --------- | ---- | ---------------------------------------------------------------- |
+| arr       | int* | Address of the first element of the array. Equivalent to &arr[0] |
+| arr + i   | int* | Address of the ith element of the array                          |
+| \*(arr+i) | int  | value of ith element of the array                                |
+| arr[i]    | int  | value of ith element of the array                                |
+
 ---
+
 #### String literals
 A **string literal** is a sequence of characters enclosed in double quotes (`"`). It is a constant array of characters that ends with a null character (`'\0'`), which indicates the end of the string.
 
@@ -172,5 +176,4 @@ int main() {
 ---
 
 #### References
-1. Virtual Memory - Chapter 9 CSAPP
-2. [Chapter 3. Strings, Vectors, and Arrays | C++ Primer, Fifth Edition](https://cpp-primer.pages.dev/book/029-chapter_3._strings_vectors_and_arrays.html)
+1. [Chapter 3. Strings, Vectors, and Arrays | C++ Primer, Fifth Edition](https://cpp-primer.pages.dev/book/029-chapter_3._strings_vectors_and_arrays.html)
