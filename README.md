@@ -44,7 +44,7 @@ After taking this course, students will be able to write portable, efficient app
 9. [Lecture 9](lectures/Lecture9.md)
 - Multifile compilation
 10. [Lecture 10](lectures/Lecture10.md)
-- Virtual memory (OS env)
+- Arrays (C++)
 - Strings (C++)
 11.  [Lecture 11](lectures/Lecture11.md)
 - Different ways to consume standard input(C++)
