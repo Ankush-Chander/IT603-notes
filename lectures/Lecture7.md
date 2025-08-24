@@ -46,6 +46,7 @@
 
 ## Different kinds of operators
 **Arithmetic operators**
+
 |Operator|Function|Use|
 |---|---|---|
 |`+`|Unary plus|`+expr`|
@@ -107,6 +108,7 @@ The right side of an && is evaluated if and only if the left side is true.
 Eg: If you have 70+ attendance **and** you get Grade above 3,  you pass.
 If first statement evaluates to False, the second  one does not need to be evaluated and final result will be False.
 ```
+
 The right side of an || is evaluated if and only if the left side is false.  
 ```
 Eg: if its sunny **or** I have an umbrella, I will be dry.

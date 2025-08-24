@@ -1,5 +1,7 @@
 ---
-delivery date: 2024-08-20
+delivery date:
+  - 2024-08-20
+  - "[[2025-08-14]]"
 ---
 # Agenda
 1. Memory Hierarchy
@@ -39,48 +41,6 @@ Cache leads to improved performance because of following principles:
 **Temporal locality:**  a memory location that is referenced once is likely to be referenced again multiple times in the near future.  
 **Spatial locality:**  if a memory location is referenced once, then the program is likely to reference a nearby memory location in the near future.
 
----
-Cache-friendly code
-```c++
-/* code */
-int marray[100000][100000];
-for (int i = 0; i < 100000; i++)
-	{
-		for (int j = 0; j < 100000; j++)
-		{
-			marray[i][j] = i +j;
-		}
-	}
-```
-
-|                  |          |          |          |          |          |          |
-| ---------------- | -------- | -------- | -------- | -------- | -------- | -------- |
-| Address Contents | $a_{00}$ | $a_{01}$ | $a_{02}$ | $a_{10}$ | $a_{11}$ | $a_{12}$ |
-| Access order     | 1        | 2        | 3        | 4        | 5        | 6        |
-
-Program has good spatial locality as variables are accessed in the same order they are laid out in memory.
-
----
-Not so cache-friendly code
-```c++
-/* code */
-int marray[100000][100000];
-for (int j = 0; j < 100000; j++)
-	{
-		for (int i = 0; i < 100000; i++)
-		{
-			marray[i][j] = i +j;
-		}
-	}
-```
-
-|                  |          |          |          |          |          |          |
-| ---------------- | -------- | -------- | -------- | -------- | -------- | -------- |
-| Address Contents | $a_{00}$ | $a_{01}$ | $a_{02}$ | $a_{10}$ | $a_{11}$ | $a_{12}$ |
-| Access order     | 1        | 3        | 5        | 2        | 4        | 6        |
-|                  |          |          |          |          |          |          |
-
-Program has poor spatial locality as variables are accessed in the same order they are laid out in memory.
 
 ---
 #### Relative latencies
@@ -174,6 +134,14 @@ int arr6[2][3] = {1,2,3,4} // valid
 //4 0 0
 ```
 ---
+
+|           | Col 0       | Col 1       | Col 2       |
+| --------- | ----------- | ----------- | ----------- |
+| **Row 0** | `arr[0][0]` | `arr[0][1]` | `arr[0][0]` |
+| **Row 1** | `arr[1][0]` | `arr[1][1]` | `arr[1][2]` |
+| **Row 2** | `arr[2][0]` | `arr[2][1]` | `arr[2][2]` |
+
+---
 ##### Pointer Arithmetic
 ```c++
 int arr[2][3] = {{1, 2, 3}, {4, 5, 6}};
@@ -196,6 +164,50 @@ cout << arr[0][0] << endl;
 | val  | $$arr[0][0]$$ | $$arr[0][1]$$ | $$arr[0][2]$$ | $$arr[1][0]$$ | $$arr[1][1]$$ |
 | addr | $$arr$$       |               |               | $$arr+1$$     |               |
 | addr | $$arr[0]$$    | $$arr[0]+1$$  | $$arr[0]+2$$  | $$arr[1]$$    | $$arr[1]+1$$  |
+
+
+---
+Cache-friendly code
+```c++
+/* code */
+int marray[100000][100000];
+for (int i = 0; i < 100000; i++)
+	{
+		for (int j = 0; j < 100000; j++)
+		{
+			marray[i][j] = i +j;
+		}
+	}
+```
+
+|                  |          |          |          |          |          |          |
+| ---------------- | -------- | -------- | -------- | -------- | -------- | -------- |
+| Address Contents | $a_{00}$ | $a_{01}$ | $a_{02}$ | $a_{10}$ | $a_{11}$ | $a_{12}$ |
+| Access order     | 1        | 2        | 3        | 4        | 5        | 6        |
+
+Program has good spatial locality as variables are accessed in the same order they are laid out in memory.
+
+---
+Not so cache-friendly code
+```c++
+/* code */
+int marray[100000][100000];
+for (int j = 0; j < 100000; j++)
+	{
+		for (int i = 0; i < 100000; i++)
+		{
+			marray[i][j] = i +j;
+		}
+	}
+```
+
+|                  |          |          |          |          |          |          |
+| ---------------- | -------- | -------- | -------- | -------- | -------- | -------- |
+| Address Contents | $a_{00}$ | $a_{01}$ | $a_{02}$ | $a_{10}$ | $a_{11}$ | $a_{12}$ |
+| Access order     | 1        | 3        | 5        | 2        | 4        | 6        |
+|                  |          |          |          |          |          |          |
+
+Program has poor spatial locality as variables are accessed in the same order they are laid out in memory.
 
 ---
 #### Tictactoe example

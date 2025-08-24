@@ -121,6 +121,11 @@ int main()
 {
     int sum = 0, value = 0;
     // read until end-of-file, calculating a running total of all values read
+    std::cin >> value => std::cin;
+
+	while(std::cin){
+	std::cin = std::cin >> value;
+	}
     while (std::cin >> value){        
         sum += value; // equivalent to sum = sum + value
     }        
@@ -134,7 +139,7 @@ int main()
 | consistent data<br>---<br>Eg: number of type `int` user entered 1234   | cin.good(): 1<br>cin.fail(): 0<br>cin.eof(): 0<br>cin.bad(): 0<br> | True          | Input stream remains in good state                                                        |
 | inconsistent data<br>---<br>Eg: number of type `int` user entered abcd | cin.good(): 0<br>cin.fail(): 1<br>cin.eof(): 0<br>cin.bad(): 0<br> | False         | expression returns false and default value of data is stored in variable                  |
 | CTRL-D                                                                 | cin.good(): 0<br>cin.fail(): 1<br>cin.eof(): 1<br>cin.bad(): 0<br> | False         | Input stream sets `fail_state` . expression returns false. random value stored in number. |
-| consistent input follwed by inconsistent input                         | cin.good(): 0<br>cin.fail(): 1<br>cin.eof(): 0<br>cin.bad(): 0<br> | False          | Data till consistent input is stored in variable. Remainder is ignored                    |
+| consistent input follwed by inconsistent input                         | cin.good(): 0<br>cin.fail(): 1<br>cin.eof(): 0<br>cin.bad(): 0<br> | False         | Data till consistent input is stored in variable. Remainder is ignored                    |
 
 # References
 1. CSAPP - Chapter 1  

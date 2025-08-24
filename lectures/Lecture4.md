@@ -10,10 +10,12 @@ delivery date: 2024-07-29
     - File Permissions (read, write, execute)
     - File management (filesystem, inode, directoryhard links, softlinks, )
 
+---
+
 # Agenda
 1. How does processes and files interact with each other?
 2. Shell script basics
-
+---
 # Abstraction of I/O devices
 
 ```
@@ -22,6 +24,7 @@ One of Unix's several groundbreaking advances was abstract devices, which remove
 
 **Data stream**: An ordered sequence of data bytes which can be read until the end of file. 
 
+---
 # Standard I/O
 **Standard input:** is a stream from which a program reads its input data. The program requests data transfers by use of the read operation. Not all programs require stream input. Some of them don"t take any input. While other takes input in the form of command line options.
 
@@ -30,9 +33,13 @@ Unless redirected, standard output is inherited from the parent process. In the 
 
 **Standard error** is another output stream typically used by programs to output error messages or diagnostics. It is a stream independent of standard output and can be redirected separately. 
 
+---
+
 ![Standard streams](https://upload.wikimedia.org/wikipedia/commons/7/70/Stdstreams-notitle.svg)
 
 Pic credits: Wikipedia
+
+---
 
 # I/O redirection
 1. **Output redirection**: By using `>` operator next to the command follwed by filename, we can redirect the output the file instead. By using `>>` you can append the output to the file instead of overwriting it.
@@ -48,14 +55,14 @@ wc < ls_output.txt
 ```bash
 ls xyz 2> ls_error.txt
 ```
-
+---
 To pass both standard output and error to same file:
 ```bash
 some_command >file.log 2>&1 
 # order matters, below will give error
 some_command 2>&1 >file.log 
 ```
-
+---
 # Pipe 
 The ability of programs to read from standard input and write to standard output comes handy when combining commands to form pipelines.
 
@@ -71,23 +78,23 @@ wc -l tmp.txt
 ls -l | wc -l
 ```
 
-
+---
 
 ![Pipe](https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Pipeline.svg/506px-Pipeline.svg.png)
 
-
+---
 # Pipe vs redirection
 
-| Feature | Pipe  | Redirection Operators <, > |
-|------------------|---------------------------------|--------------------------------------------|
-| Purpose | Connects the output of one command to the input of another command | Redirects the standard input/output of a command to/from a file |
-| Syntax | command1 \| command2 | command > file, command < file, command >> file |
-| Data Flow | Transfers data directly between commands | Transfers data between commands and files |
-| Usage Example | ls \| grep "txt" | ls > output.txt, cat < input.txt |
-| Output Handling | The output of command1 becomes the input of command2 | > writes to a file, < reads from a file, >> appends to a file |
-| Common Use Cases | Chaining commands for complex tasks | Saving command output to files, reading from files |
+| Feature          | Pipe                                                               | Redirection Operators <, >                                      |
+| ---------------- | ------------------------------------------------------------------ | --------------------------------------------------------------- |
+| Purpose          | Connects the output of one command to the input of another command | Redirects the standard input/output of a command to/from a file |
+| Syntax           | command1 \| command2                                               | command > file, command < file, command >> file                 |
+| Data Flow        | Transfers data directly between commands                           | Transfers data between commands and files                       |
+| Usage Example    | ls \| grep "txt"                                                   | ls > output.txt, cat < input.txt                                |
+| Output Handling  | The output of command1 becomes the input of command2               | > writes to a file, < reads from a file, >> appends to a file   |
+| Common Use Cases | Chaining commands for complex tasks                                | Saving command output to files, reading from files              |
 
-
+---
 # Shell scripting
 Shell script is a mini language that allows you to combine/run multiple command collectively. It is commonly used for automation, text manipulation.  
 
@@ -114,7 +121,7 @@ for i in {1..5}; do
 done
 
 ```
-
+---
 ## Key points
 1. `hashbang` operator: first line of the script tells which operator to use to run the script.
     ```bash
@@ -153,7 +160,7 @@ done
 - tr – Translate or delete characters
 - grep - Search for patterns in a file
 - sed – Stream editor for filtering and transforming text
-
+---
 # References
 1. [Wikipedia - Standard streams](https://en.wikipedia.org/wiki/Standard_streams)
 2. The Linux Command line - Ch 7 (IO redirection)

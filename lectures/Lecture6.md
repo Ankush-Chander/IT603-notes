@@ -1,5 +1,7 @@
 ---
-delivery date: 2024-07-31
+delivery date:
+  - "[[2024-07-31]]"
+  - "[[2025-07-31]]"
 ---
 
 ## Quick recap
@@ -9,13 +11,15 @@ delivery date: 2024-07-31
 # Agenda
 1. Variables and Basic Types
 2. Memory management
+---
 
 ### Variables
-A variable provides us with **named storage** that our programs can manipulate. Each variable in C++ has a type.  
+A variable is a **named location that stores a value**. Each variable in C++ has a type.  
 The type determines:   
 - the size and layout of the variable’s memory
 - the range of values that can be stored within that memory
 - the set of operations that can be applied to the variable.
+---
 
 Data Types in C++ are mainly divided into 3 Types: 
 1. **Primitive Data Types**: These data types are built-in or predefined data types and can be used directly by the user to declare variables. example: int, char, float, bool, etc. Primitive data types available in C++ are: 
@@ -26,15 +30,15 @@ Data Types in C++ are mainly divided into 3 Types:
 
 Pic credit: Geeks for Geeks
 
-| Datatype               | Description                                                                                   | Size    | Range                                 |
-|------------------------|-----------------------------------------------------------------------------------------------|---------|---------------------------------------|
-| Integer                | The keyword used for integer data types is **int**.                                               | 4 bytes | -2147483648 to 2147483647             |
-| Character              | Character data type is used for storing characters. The keyword used for the character data type is **char**. | 1 byte  | -128 to 127 or 0 to 255               |
-| Boolean                | Boolean data type is used for storing Boolean or logical values. A Boolean variable can store either true or false. The keyword used for the Boolean data type is **bool**. | N/A     | true or false                         |
-| Floating Point         | Floating Point data type is used for storing single-precision floating-point values or decimal values. The keyword used for the floating-point data type is **float**. | 4 bytes | N/A                                   |
-| Double Floating Point  | Double Floating Point data type is used for storing double-precision floating-point values or decimal values. The keyword used for the double floating-point data type is **double**. | 8 bytes | N/A                                   |
-| void                   | Void means without any value. void data type represents a valueless entity. A void data type is used for those functions which do not return a value. | N/A     | N/A                                   |
-| Wide Character         | Wide character data type is also a character data type but this data type has a size greater than the normal 8-bit data type. Represented by **wchar_t**. | 2 or 4 bytes | N/A                                |
+| Datatype              | Description                                                                                                                                                                           | Size         | Range                     |
+| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | ------------------------- |
+| Integer               | The keyword used for integer data types is **int**.                                                                                                                                   | 4 bytes      | -2147483648 to 2147483647 |
+| Character             | Character data type is used for storing characters. The keyword used for the character data type is **char**.                                                                         | 1 byte       | -128 to 127 or 0 to 255   |
+| Boolean               | Boolean data type is used for storing Boolean or logical values. A Boolean variable can store either true or false. The keyword used for the Boolean data type is **bool**.           | N/A          | true or false             |
+| Floating Point        | Floating Point data type is used for storing single-precision floating-point values or decimal values. The keyword used for the floating-point data type is **float**.                | 4 bytes      | N/A                       |
+| Double Floating Point | Double Floating Point data type is used for storing double-precision floating-point values or decimal values. The keyword used for the double floating-point data type is **double**. | 8 bytes      | N/A                       |
+| void                  | Void means without any value. void data type represents a valueless entity. A void data type is used for those functions which do not return a value.                                 | N/A          | N/A                       |
+| Wide Character        | Wide character data type is also a character data type but this data type has a size greater than the normal 8-bit data type. Represented by **wchar_t**.                             | 2 or 4 bytes | N/A                       |
 
 
 ### Variable assignment
@@ -53,10 +57,12 @@ double salePrice = applyDiscount(price, discount);
 
 ---
 
-### Address space
+#### Address space
 ![](images/address_space.png)
 
 ---
+
+
 
 | Memory Segment | Type of Variables                                           | Characteristics                                |
 | -------------- | ----------------------------------------------------------- | ---------------------------------------------- |
@@ -75,7 +81,7 @@ double salePrice = applyDiscount(price, discount);
 | (Text Segment) |                                                             | - Contains compiled code                       |
 
 
-# Default values
+#### Default values
 
 | Variable Type          | Memory Segment | Default Initialization                     |
 |------------------------|----------------|--------------------------------------------|
@@ -87,7 +93,7 @@ double salePrice = applyDiscount(price, discount);
 | Built-in Types (Global/Static) | Data Segment | Zero-initialized (0 for basic types)       |
 | User-Defined Types     | Stack/Heap     | Default constructor (if provided)          |
 
-### Segmentation fault experiment
+#### Segmentation fault experiment
 ```c++
 #include <iostream>
 
@@ -105,12 +111,28 @@ int main() {
 }
 
 ```
+---
+#### Related bash commands
+```bash
+
+# return the maximum memory available to program stack(in KB)
+ulimit -s 
+
+# return the maximim heap memory available to a program
+ulimit -v
+
+# set maximum heap memory to 2GB
+ulimit -v 2097152
+```
+```
 
 ### How to choose data types?
 - Use an unsigned type when you know that the values cannot be negative.
 - Use `int` for integer arithmetic. `short` is usually too small and, in practice, `long` often has the same size as `int`. If your data values are larger than the minimum guaranteed size of an `int`, then use `long long`.
 - Do not use plain `char` or `bool` in arithmetic expressions. Use them _only_ to hold characters or truth values.
 - Use `double` for floating-point computations; `float` usually does not have enough precision, and the cost of double-precision calculations versus single-precision is negligible.
+```
+
 
 # Type conversion
 ```c++
