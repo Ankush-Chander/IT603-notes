@@ -82,7 +82,7 @@ Encapsulation provides two important advantages:
 
 ---
 
-##### Constructors
+##### Constructor
 A **constructor** is a special member function that is automatically called when an object is created. Constructors are used to initialize objects.
 
 ```c++
@@ -93,12 +93,30 @@ Vector2D(float x = 0, float y = 0){
 }
 ```
 ---
+##### Destructor
+- Called automatically when an object goes out of scope or is deleted.
+- Same name as the class, preceded by `~`.
+- Used for cleanup tasks.
+
+```cpp
+class Vector2D {
+// ...
+public:
+	// destructor
+	~Vector2D(){
+	std::cout << "destructor called" << std::endl;
+	}
+// ...
+}
+```
+---
 
 ##### Access Control
 
 In C++ we use **[access specifiers](https://cpp-primer.pages.dev/book/080-defined_terms.html#filepos2054821)** to enforce encapsulation:
-- Members defined after a `public` specifier are **accessible to all parts of the program**. The `public` members define the interface to the class.
-- Members defined after a `private` specifier are **accessible to the member functions of the class but are not accessible to code that uses the class**. The `private` sections encapsulate (i.e., hide) the implementation.
+- - **public**: Members defined after a `public` specifier are **accessible to all parts of the program**. The `public` members define the interface to the class.
+- - **private**: Members defined after a `private` specifier are **accessible to the member functions of the class but are not accessible to code that uses the class**. The `private` sections encapsulate (i.e., hide) the implementation.
+- - **protected**: Members defined after a `protected` specifier are  Accessible within the class and its derived classes.
 ---
 ```c++
 private:
@@ -115,6 +133,7 @@ float getX(){return this->x;}
 // getter of y
 float getY(){return this->y;}
 ```
+---
 
 **Method Chaining**: In the example above, the `setX()` and `setY()` methods return `*this`, which allows the methods to be chained together like `vec.setX(3.0).setY(4.0);`. Without returning `*this`, chaining wouldn’t be possible.
 
@@ -131,11 +150,39 @@ cout << vp->getX() << endl;// vp is a pointer. use "->" operator
 ##### Operator overloading
 Operator overloading is a feature in C++ that **allows you to define custom behaviours for operators when they are used with user-defined types (like classes).** This means you can give special meanings to operators (such as `+`, `-`, `*`, `==`, etc.) when they are applied to objects of your classes, **making your classes more intuitive and easier to use**.
 
+---
 ```c++
-ReturnType operator<symbol>(ParameterList) { 
-// Custom implementation 
+class Vector2D {
+private:
+	float x, y;
+public:
+	Vector2D operator+(Vector2D& v){
+		return Vector2D(x + v.x, y + v.y);
+	}
 }
+// usage: Vector2D v3 = v1+v2;
 ```
+instead of 
+```c++
+// instead of 
+Vector2D addVectors(Vector2D v) const {
+	return Vector2D(this->x + v.x, this->y + v.y);
+}
+// usage: Vector2D v3 = v1.addVectors(v2);
+```
+---
+##### The Three Basic Rules of Operator Overloading
+1. _**Whenever the meaning of an operator is not obviously clear and undisputed, it should not be overloaded.**_ _Instead, provide a function with a well-chosen name._  
+    Basically, the first and foremost rule for overloading operators, at its very heart, says: _Don’t do it_.
+2. _**Always stick to the operator’s well-known semantics.**_  
+3. _**Always provide all out of a set of related operations.**_  
+    _Operators are related to each other_ and to other operations. If your type supports `a + b`, users will expect to be able to call `a += b`, too. 
+---
+##### Friend functions
+A **friend function** in C++ is a function that is **not a member** of a class but has access to the class's **private and protected members**. 
+
+**Why friend functions?**  
+- allow external functions to work closely with the internals of a class, often for purposes like operator overloading, accessing private data for computations, or implementing related utility functions.
 
 ---
 #### References
