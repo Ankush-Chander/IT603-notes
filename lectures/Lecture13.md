@@ -9,7 +9,7 @@ delivery date:
 ---
 ## Agenda
 1. Structures
-2. Classes
+2. Classes  
 Refer code [here](../code/lecture/13)
 ---
 #### Structures
