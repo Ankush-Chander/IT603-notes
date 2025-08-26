@@ -2,6 +2,7 @@
 delivery date:
   - 2024-08-22
   - "[[2025-08-19]]"
+  - "[[2025-08-26]]"
 ---
 ### Quick Recap
 1. Memory Hierarchy
