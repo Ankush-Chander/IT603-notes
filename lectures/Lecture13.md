@@ -11,6 +11,7 @@ delivery date:
 1. Structures
 2. Classes  
 Refer code [here](../code/lecture/13)
+
 ---
 #### Structures
 Structures are a fundamental C++ mechanism for creating **compound values** or **compound types**. Unlike basic data types (integers, booleans, floating-point numbers) that represent a single value, structures allow you to **group multiple, related pieces of data into a single, cohesive unit.**

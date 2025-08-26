@@ -40,7 +40,7 @@ class Vector2D {
         }
 
         void displayVector(){
-            cout << "(" << x << ", " << y << ")" << endl;
+            cout << "(" << this->x << ", " << this->y << ")" << endl;
 }
 };
 

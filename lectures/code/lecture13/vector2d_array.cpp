@@ -25,7 +25,7 @@ Vec2 scalarMultiply(const Vec2& v, float scalar) {
 }
 
 int main() {
-    Vec2 a = {3.0f, 4.0f};
+    Vec2 a = {3.0f, 4.0f}; // equivalent to array<float, 2> a = {3.0f, 4.0f}; 
     Vec2 b = {1.0f, 2.0f};
 
     cout << "a = "; print(a); cout << endl;
