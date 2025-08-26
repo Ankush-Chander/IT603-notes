@@ -21,7 +21,7 @@ public:
     }
 
     // Overloading '+' operator for vector addition
-    Vector2D operator+(const Vector2D& v) const {
+    Vector2D operator+(const Vector2D& v) const { // v1 + v2 =>v1.operator+(v2)
         return Vector2D(x + v.x, y + v.y);
     }
 
