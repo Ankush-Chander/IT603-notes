@@ -3,6 +3,7 @@ delivery date: []
 ---
 # Agenda
 1. Dynamic arrays
+2. Refer [code](code/lecture_13b)
 ---
 #### Vectors
 `std::vector` is a class that provides a **dynamic array** functionality. Unlike static arrays, where the size is fixed at compile-time, vectors can **dynamically resize themselves** as elements are added or removed.
