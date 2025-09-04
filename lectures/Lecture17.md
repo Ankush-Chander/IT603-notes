@@ -125,6 +125,7 @@ cout << "Enter size of array: ";
 cin >> n;
 int* arr = new int[n];  // Allocates 'n' integers dynamically based on user input
 ```
+---
 
 2. **Larger Data Structures:**
    The **stack** has limited space, and large objects (such as large arrays or complex data structures) may exceed the stack size, leading to a **stack overflow**. The **heap** provides a much larger memory pool.
@@ -132,6 +133,7 @@ int* arr = new int[n];  // Allocates 'n' integers dynamically based on user inpu
 ```bash
 ulimit -s # returns 8192KB 
 ```
+---
 
 3. **Data Persistence Beyond Function Scope**: 
 Dynamically allocated memory persists even after a function ends, allowing data to live beyond the local scope of the function. This makes it useful for scenarios where you need objects to survive across function calls.
@@ -143,6 +145,7 @@ int* createInt() {
 	// Memory persists after function returns
 }
 ```
+---
 
 4. **Complex Data Structures**  
 **Dynamic memory allocation** is essential for constructing complex data structures such as:  
@@ -158,6 +161,7 @@ A memory leak occurs when dynamically allocated memory is not freed after it's n
 int* ptr = new int(10);
 // Forgot to free memory with delete
 ```
+---
 
  2. **Dangling Pointers**
 A dangling pointer arises when memory is deallocated, but the pointer still holds the address of the freed memory. Accessing or modifying a dangling pointer can lead to **undefined behavior** or program crashes.
@@ -174,6 +178,7 @@ Set the pointer to `nullptr` after deleting it to prevent accidental access:
 delete ptr;
 ptr = nullptr;
 ```
+---
 
 3. **Improper Use of `new[]` and `delete[]`**
 When allocating arrays dynamically, you need to use `new[]` to allocate and `delete[]` to deallocate. Using `delete` instead of `delete[]` can result in undefined behavior.
@@ -189,6 +194,7 @@ Always use `delete[]` for arrays:
 ```cpp
 delete[] arr;  // Correct deallocation
 ```
+---
 
  4. **Mixing `malloc`/`free` with `new`/`delete`**
 In C++, `new`/`delete` should be used for dynamic memory allocation and deallocation, whereas `malloc`/`free` come from C. Mixing them can lead to undefined behavior.

@@ -123,8 +123,8 @@ time ./vector_relocation.out 100000000
 ```
 
 ---
-### Vector class implementation
-Refer [vector.cpp](../code/)
+### IntVector class implementation
+Refer code here[]()
 
 ---
 #### References

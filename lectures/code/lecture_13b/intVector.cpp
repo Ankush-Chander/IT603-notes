@@ -2,18 +2,32 @@
 #include <stdexcept> // to use std::out_of_range
 
 
+
 class IntVector {
     private:
         int size;
         int capacity;
-        int* data;
+        
 
     public:
+    int* data;
     IntVector(){
         this->size = 0;
         this->capacity = 0;
         this->data = nullptr;
     }
+    
+    IntVector(std::initializer_list<int> ilist){
+        this->size = ilist.size();
+        this->capacity = ilist.size();
+        this->data = new int[ilist.size()];
+        size_t i=0;
+        for(int val : ilist){
+            this->data[i] = val;
+            i++;
+        }
+    }
+
     ~IntVector(){
         std::cout << "calling deconstructor" << std::endl; 
         delete[] this->data;
@@ -67,17 +81,39 @@ class IntVector {
         this->size--;
     }
 
-    int operator[](size_t i){
+    int& operator[](size_t i){
         if (i>this->getSize()){
             // throw std::out_of_range;
         }
         return this->data[i];
     }
+    // support vec[x]=1;
 
     void clear(){
         this->size=0;
     }
+    // disable copy constructor
+    // IntVector(const IntVector& other) = delete;
+    // // disable copy assignment
+    // IntVector& operator=(const IntVector& other) = delete;
 };
+
+void printVector(IntVector vec){
+    std::cout << "Printing vector: ";
+    for (size_t i = 0; i < vec.getSize(); ++i) {
+        std::cout << vec[i] << " ";
+    }
+    std::cout << std::endl;
+}
+
+IntVector doubleVector(IntVector vec){
+    IntVector newVec;
+    std::cout << "Doubling vector: ";
+    for (size_t i = 0; i < vec.getSize(); ++i) {
+        newVec.push_back(vec[i]*2);
+    }
+    return newVec;
+}
 
 int main() {
     IntVector vec;
@@ -91,7 +127,7 @@ int main() {
     std::cout << "Capacity: " << vec.getCapacity() << std::endl;
 
     vec.insert(1, 4);
-    // vec[1] = -4;
+    vec[1] = -4;
     std::cout << "After insert(1,4): ";
     for (size_t i = 0; i < vec.getSize(); ++i) {
         std::cout << vec[i] << " ";
@@ -116,7 +152,23 @@ int main() {
     
     vec.clear();
     std::cout << "After clear, size: " << vec.getSize() << std::endl;
-    IntVector v2 = vec;
+    
+    // // // copy constructer
+    // IntVector v2 = vec;
+    // std::cout <<"v2.data=" << long(v2.data) << std::endl;
+    // std::cout <<"vec.data=" << long(vec.data) << std::endl;
 
+    // // copy assignment
+    IntVector v3;
+    // v3 = vec;
+    std::cout <<"v3.data=" << long(v3.data) << std::endl;
+    std::cout <<"vec.data=" << long(vec.data) << std::endl;
+    IntVector v4 = {1,2,3};
+
+    // std::cout << "v4.getSize()=" << v4.getSize() << std::endl;
+    IntVector v6 = doubleVector(v4);
+    // printVector(v4);
+    // printVector(v6);
+    // vec[1] = 10;
     return 0;
 }
