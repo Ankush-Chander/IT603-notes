@@ -275,9 +275,9 @@ $$\text{where w=4 bits,  min=0,  max=15}$$
 
 ---
 #### 2"s complement multiplication
-Operands: w bits
-True product: 2*w bits
-Discard w most significant bits. 
+Operands: w bits  
+True product: 2*w bits  
+Discard w most significant bits.   
 
 ---
 #### References
