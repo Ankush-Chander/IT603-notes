@@ -8,6 +8,7 @@ delivery date:
 #### Agenda
 - Copy Constructor and Assignment operator
 	- Deep copying vs Shallow copying
+- Refer [code](code/lecture_13b)
 ---
 
 ### What is Object Copying?

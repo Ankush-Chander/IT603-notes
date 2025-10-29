@@ -56,6 +56,10 @@ After taking this course, students will be able to write portable, efficient app
 13. [Lecture 13](lectures/Lecture13.md)
 - Structures
 - Classes
+13. [Lecture 13_b](lectures/Lecture13_b.md) and  [Lecture 13_c](lectures/Lecture13_c.md)
+- Dynamic arrays
+- Copy Constructor and Assignment operator
+- Deep copying vs Shallow copying 
 14. [Lecture 14](lectures/Lecture14.md)
 - Numeric representations (Decimal, Binary, Hexadecimal)
 - Data sizes
