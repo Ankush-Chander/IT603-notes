@@ -1,5 +1,7 @@
 ---
-delivery date: 2024-09-03
+delivery date:
+  - 2024-09-03
+  - "[[2025-09-09]]"
 ---
 # Quick Recap
 1. Classes
