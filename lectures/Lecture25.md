@@ -49,8 +49,8 @@ Overload resolution proceeds through the following steps:
 ---
 Each [type of standard conversion sequence](https://en.cppreference.com/w/cpp/language/implicit_conversion "cpp/language/implicit conversion") is assigned one of three ranks:
 
-1) **Exact match**: no conversion required, lvalue-to-rvalue conversion, qualification conversion, function pointer conversion,(since C++17) user-defined conversion of class type to the same class
-2) **Promotion**: integral promotion, floating-point promotion  
+1) **Exact match**: no conversion required, lvalue-to-rvalue conversion, qualification conversion, function pointer conversion,(since C++17) user-defined conversion of class type to the same class  
+2) **Promotion**: integral promotion, floating-point promotion    
 3) **Conversion**: integral conversion, floating-point conversion, floating-integral conversion, pointer conversion, pointer-to-member conversion, boolean conversion, user-defined conversion of a derived class to its base
 
 ---
@@ -149,6 +149,13 @@ A function template is a recipe for generating a parametrized family of function
 **Example**:
 ```cpp
 //- Definition of function template min
+
+int min(int &a, int &b){ 
+	return (b < a) ? b : a;
+}
+
+
+
 template<class T>
 T const& min(T const& a, T const& b)
 {
@@ -159,6 +166,7 @@ int i = 42, j = 100;
 double d = 3.14, e = 4.6;
 auto k = min<int>(i, j); // k = 42
 auto f = min<double>(d, e); // f = 3.14
+
 ```
 
 ---

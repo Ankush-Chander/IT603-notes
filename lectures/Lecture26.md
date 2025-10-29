@@ -191,9 +191,76 @@ void foo (IntStack const& s); // s is stack of ints
 IntStack istack[10];// istack is array of 10 stacks of ints
 ```
 ---
-#### Iterators, Container algorithms
-Refer code examples
+---
+#### Class instantiation
+1. For class templates, only those member functions that are called are instantiated.
+ 
+```c++
+#include <iostream>
+// A simple class template
+template <typename T>
+class Calculator {
+public:
+// Method that adds two numbers
+T add(T a, T b) {
+return a + b;
+}
+// Method that subtracts two numbers
+T subtract(T a, T b) {
+return a - b;
+}
+// Method that multiplies two numbers
+T multiply(T a, T b) {
+return a * b;
+}
+// Method that divides two numbers
+T divide(T a, T b) {
+return a / b;
+}
+};
+```
 
+```c++
+int main() {
+
+Calculator<int> intCalc;
+
+// Only 'add' and 'subtract' methods are called
+
+std::cout << "Addition: " << intCalc.add(5, 3) << std::endl;
+
+std::cout << "Subtraction: " << intCalc.subtract(5, 3) << std::endl;
+
+return 0;
+}
+```
+---
+#### Compiler Behavior:
+
+- **Code Instantiation:**  When compiling, the C++ compiler analyzes which member functions are being used with the given type `int` and **generates machine code only for these functions** (`add` and `subtract` in this example).
+
+- **Efficiency:** This selective instantiation helps reduce the binary size and improve the efficiency of the compiled program because unused methods are not included.
+
+---
+#### Generic programming
+
+Which function is more generic?
+
+```cpp
+// function 1
+T max(T a, T b){
+return a-b>0? a:b;
+}
+
+// function 2
+T max(T a, T b){
+return a>b? a:b;
+}
+
+```
+---
+
+	
 ---
 #### References
 1. [Chapter 2 - C++ templates - Complete guide](https://github.com/fusying-hwang/books/blob/main/C%2B%2B%20Templates%20The%20Complete%20Guide(2nd).pdf)
