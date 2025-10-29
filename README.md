@@ -77,10 +77,12 @@ After taking this course, students will be able to write portable, efficient app
 - Dynamic Memory
 18. [Lecture 18](lectures/Lecture18.md)
 - Iterators
+- [Example code](lectures/code/iterators)
 19. [Lecture 19](lectures/Lecture19.md)
 - Time complexity analysis
 20. [Lecture 20](lectures/Lecture20.md)
 - Associative Containers
+- [Example code](lectures/code/associative_containers)
 21. [Lecture 21](lectures/Lecture21.md)
 - Generic Algorithms
 22. [Lecture 22](lectures/Lecture22.md)
